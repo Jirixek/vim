@@ -1,3 +1,5 @@
+" TODO: add V global reg
+"
 " Install vim-plug if not present
 " Bootstrap Plug
 let autoload_plug_path = stdpath('data') . '/site/autoload/plug.vim'
@@ -19,6 +21,9 @@ Plug 'neomake/neomake'
 Plug 'tpope/vim-commentary'
 Plug 'itspriddle/vim-shellcheck'
 
+Plug 'ptzz/lf.vim'
+Plug 'rbgrouleff/bclose.vim'
+
 call plug#end()
 
 " Use Vim settings, rather than Vi settings.
@@ -29,6 +34,8 @@ endif
 
 filetype plugin indent on
 syntax on
+set background=dark
+" set termguicolors                       " Enable true color in the terminal
 colorscheme iceberg
 let &t_ut=''					" Disable background color erase
 set encoding=utf-8
@@ -53,10 +60,13 @@ endif
 set smartcase
 set infercase					" Autocompletion - include words starting with lowercase
 set tabstop=6 shiftwidth=6			" Tab width
-set scrolloff=3					" Follow cursor when scrolling
+set scrolloff=4					" Follow cursor when scrolling
 set splitbelow splitright			" Splits open at the bottom and right
 set formatprg=par\ tdw80			" Use Berkeley formater for gq
 set number relativenumber			" Add sidebar with line numbers
+
+" set cursorline
+" set cursorcolumn
 
 runtime macros/matchit.vim
 
@@ -136,6 +146,13 @@ nnoremap <Leader>j o<CR>
 nnoremap <Leader>k O<ESC>O
 nnoremap <Leader>o o<ESC>O
 
+" Disable/enable autocommenting
+map <Leader>c :setlocal formatoptions-=cro<CR>
+map <Leader>C :setlocal formatoptions+=cro<CR>
+
+" Enable spell checking
+map <Leader>s :setlocal spell!
+
 " Mute highlights with <c-l>
 nnoremap <silent> <c-l> :noh<CR><c-l>
 
@@ -151,6 +168,10 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Map this for use in templates
 nnoremap <Leader><Space> /<++><Enter>"_c4l
+
+" lf
+nnoremap <Leader>f :LfWorkingDirectory<CR>
+nnoremap <Leader>t :LfWorkingDirectoryExistingOrNewTab<CR>
 
 " ===========
 "   AUTOCMD
@@ -220,3 +241,9 @@ let g:neomake_highlight_columns = 0
 let g:neomake_highlight_lines = 0
 let g:neomake_place_signs = 0
 let g:neomake_open_list = 2
+
+" ====
+"  lf
+" ====
+let g:lf_replace_netrw = 1 " Open lf when vim open a directory
+let g:lf_map_keys = 0 " Use custom mappings
