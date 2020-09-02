@@ -35,7 +35,7 @@ endif
 filetype plugin indent on
 syntax on
 set background=dark
-" set termguicolors                       " Enable true color in the terminal
+set termguicolors                         " Enable true color in the terminal
 colorscheme iceberg
 let &t_ut=''					" Disable background color erase
 set encoding=utf-8
