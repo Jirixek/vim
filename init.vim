@@ -20,6 +20,7 @@ Plug 'nelstrom/vim-visual-star-search'
 Plug 'neomake/neomake'
 Plug 'tpope/vim-commentary'
 Plug 'itspriddle/vim-shellcheck'
+Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'ptzz/lf.vim'
 Plug 'rbgrouleff/bclose.vim'
@@ -109,31 +110,32 @@ nnoremap <f5> :wall <bar> lclose <bar> Neomake!<CR>
 " Compile and create ctags
 nnoremap <f6> :wall <bar> !ctags -R &<CR> <bar> :lclose <bar> Neomake!<CR>
 
-" Switch between windows more effectively
+" Switch between windows more effectively (also with vim-tmux-navigator)
 " https://github.com/neovim/neovim/pull/2076#issuecomment-76998265
-nnoremap <a-h> <c-w>h
-nnoremap <a-j> <c-w>j
-nnoremap <a-k> <c-w>k
-nnoremap <a-l> <c-w>l
-vnoremap <a-h> <c-\><c-n><c-w>h
-vnoremap <a-j> <c-\><c-n><c-w>j
-vnoremap <a-k> <c-\><c-n><c-w>k
-vnoremap <a-l> <c-\><c-n><c-w>l
-inoremap <a-h> <c-\><c-n><c-w>h
-inoremap <a-j> <c-\><c-n><c-w>j
-inoremap <a-k> <c-\><c-n><c-w>k
-inoremap <a-l> <c-\><c-n><c-w>l
-cnoremap <a-h> <c-\><c-n><c-w>h
-cnoremap <a-j> <c-\><c-n><c-w>j
-cnoremap <a-k> <c-\><c-n><c-w>k
-cnoremap <a-l> <c-\><c-n><c-w>l
+nnoremap <a-h> :TmuxNavigateLeft<CR>
+nnoremap <a-j> :TmuxNavigateDown<CR>
+nnoremap <a-k> :TmuxNavigateUp<CR>
+nnoremap <a-l> :TmuxNavigateRight<CR>
+vnoremap <a-h> <c-\><c-n>:TmuxNavigateLeft<CR>
+vnoremap <a-j> <c-\><c-n>:TmuxNavigateDown<CR>
+vnoremap <a-k> <c-\><c-n>:TmuxNavigateUp<CR>
+vnoremap <a-l> <c-\><c-n>:TmuxNavigateRight<CR>
+inoremap <a-h> <c-\><c-n>:TmuxNavigateLeft<CR>
+inoremap <a-j> <c-\><c-n>:TmuxNavigateDown<CR>
+inoremap <a-k> <c-\><c-n>:TmuxNavigateUp<CR>
+inoremap <a-l> <c-\><c-n>:TmuxNavigateRight<CR>
+cnoremap <a-h> <c-\><c-n>:TmuxNavigateLeft<CR>
+cnoremap <a-j> <c-\><c-n>:TmuxNavigateDown<CR>
+cnoremap <a-k> <c-\><c-n>:TmuxNavigateUp<CR>
+cnoremap <a-l> <c-\><c-n>:TmuxNavigateRight<CR>
 if has('nvim')
-	tnoremap <a-h> <c-\><c-n><c-w>h
-	tnoremap <a-j> <c-\><c-n><c-w>j
-	tnoremap <a-k> <c-\><c-n><c-w>k
-	tnoremap <a-l> <c-\><c-n><c-w>l
-	tnoremap <Esc> <C-\><C-n>
+	tnoremap <a-h> <c-\><c-n>:TmuxNavigateLeft<CR>
+	tnoremap <a-j> <c-\><c-n>:TmuxNavigateDown<CR>
+	tnoremap <a-k> <c-\><c-n>:TmuxNavigateUp<CR>
+	tnoremap <a-l> <c-\><c-n>:TmuxNavigateRight<CR>
+	tnoremap <Esc> <c-\><c-n>
 endif
+" nnoremap <silent> {Previous-Mapping} :TmuxNavigatePrevious<cr>
 
 " Resizing windows
 nnoremap <a-,> <c-w><
@@ -242,8 +244,18 @@ let g:neomake_highlight_lines = 0
 let g:neomake_place_signs = 0
 let g:neomake_open_list = 2
 
-" ====
-"  lf
-" ====
-let g:lf_replace_netrw = 1 " Open lf when vim open a directory
-let g:lf_map_keys = 0 " Use custom mappings
+" ======
+"   lf
+" ======
+" Open lf when vim open a directory
+let g:lf_replace_netrw = 1
+" Use custom mappings
+let g:lf_map_keys = 0
+
+" ======================
+"   vim-tmux-navigator
+" ======================
+" Use custom bindings
+let g:tmux_navigator_no_mappings = 1
+" Disable tmux navigator when zooming the Vim pane
+let g:tmux_navigator_disable_when_zoomed = 1
