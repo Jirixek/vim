@@ -1,4 +1,4 @@
-augroup spellfiles
+augroup spelling
 	autocmd!
 	" Define VIMHOME variable
 	let HOMEDIR = fnamemodify(expand("$MYVIMRC"), ":p:h")

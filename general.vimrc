@@ -40,5 +40,3 @@ set formatoptions-=cro                    " Do not autocomment when adding new l
 
 " set cursorline
 " set cursorcolumn
-
-runtime macros/matchit.vim

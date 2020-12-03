@@ -8,3 +8,5 @@ execute 'source' PLUGINDIR . 'lf.vimrc'
 execute 'source' PLUGINDIR . 'neomake.vimrc'
 execute 'source' PLUGINDIR . 'syntastic.vimrc'
 execute 'source' PLUGINDIR . 'vim-tmux-navigator.vimrc'
+
+runtime macros/matchit.vim
