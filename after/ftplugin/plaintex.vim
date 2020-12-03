@@ -1,2 +1,2 @@
-setlocal makeprg=tex.sh\ %
-nnoremap <f6> :silent! !evince %:r.pdf &>/dev/null &<CR><C-l>
+let HOMEDIR = fnamemodify(expand("$MYVIMRC"), ":p:h")
+execute 'source' HOMEDIR . '/after/ftplugin/tex.vim'

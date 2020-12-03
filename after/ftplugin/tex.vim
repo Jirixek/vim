@@ -1,2 +1,2 @@
 setlocal makeprg=tex.sh\ %
-nnoremap <f6> :silent! !evince %:r.pdf &>/dev/null &<CR><C-l>
+nnoremap <f3> :silent! !okular %:r.pdf &>/dev/null &<CR><C-l>
