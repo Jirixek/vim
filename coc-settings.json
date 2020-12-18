@@ -1,0 +1,6 @@
+{
+	"coc.preferences.formatOnType": true,
+	"coc.preferences.extensionUpdateCheck": "daily",
+	"python.venvPath": "$HOME/.local/share/conda/envs",
+	"python.linting.flake8Enabled": true
+}

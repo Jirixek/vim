@@ -11,14 +11,11 @@ unlet autoload_plug_path
 call plug#begin(stdpath('data') . '/plugged')
 
 " Big boys
-Plug 'vim-syntastic/syntastic'
 Plug 'neomake/neomake'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'Konfekt/FastFold'
-" Plug 'kien/ctrlp.vim'
 
 " System integration
-Plug 'ptzz/lf.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'christoomey/vim-tmux-navigator'
 

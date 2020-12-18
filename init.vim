@@ -1,7 +1,5 @@
-" TODO: <Leader>g exiting
 " TODO: macro na odclassování
 " TODO: macro na přehazování komentářu s řádkem
-" TODO: add V global reg
 
 
 let HOMEDIR = fnamemodify(expand("$MYVIMRC"), ":p:h")

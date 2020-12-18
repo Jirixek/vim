@@ -14,9 +14,8 @@ function DeleteTrailingSpace()
 	call winrestview(l:save_view)
 endfunction
 
-augroup vimrc
-	autocmd!
 
+augroup vimrc
 	" Automatically delete all trailing whitespace
 	autocmd BufWritePre * call DeleteTrailingSpace()
 

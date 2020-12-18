@@ -29,11 +29,6 @@ xnoremap & :&&<CR>
 nnoremap n nzz
 nnoremap N Nzz
 
-" Compile
-nnoremap <f5> :wall <bar> Neomake!<CR>
-" Compile and create ctags
-nnoremap <f6> :wall <bar> Neomake! <bar> !ctags -R &<CR>
-
 " Switch between windows more effectively (also with vim-tmux-navigator)
 " https://github.com/neovim/neovim/pull/2076#issuecomment-76998265
 nnoremap <a-h> :TmuxNavigateLeft<CR>
@@ -78,7 +73,7 @@ map <Leader>c :setlocal formatoptions-=cro<CR>
 map <Leader>C :setlocal formatoptions+=cro<CR>
 
 " Enable spell checking
-map <Leader>s :setlocal spell!
+map <Leader>s :setlocal spell!<CR>
 
 " Mute highlights with <c-l>
 nnoremap <silent> <c-l> :noh<CR><c-l>
@@ -95,9 +90,3 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Map this for use in templates
 nnoremap <Leader><Space> /<++><Enter>"_c4l
-
-" lf
-nnoremap <Leader>g :LfWorkingDirectory<CR>
-nnoremap <Leader>G :LfWorkingDirectoryExistingOrNewTab<CR>
-" TODO
-tnoremap <Esc> <C-\><C-n>
