@@ -1,4 +1,4 @@
-let PLUGINDIR = fnamemodify(expand("$MYVIMRC"), ":p:h") . '/plugin_config/'
+let PLUGINDIR = fnamemodify(expand("$MYVIMRC"), ":p:h") . '/config/plugin/'
 
 
 execute 'source' PLUGINDIR . 'coc.vimrc'
