@@ -15,14 +15,15 @@ setlocal fileformat=unix
 " Enable folding
 " setlocal foldmethod=indent
 
+set indentexpr=GetPythonPEPIndent(v:lnum)
 
 " ===========
 "   AUTOCMD
 " ===========
+highlight BadWhitespace ctermbg=red guibg=darkred
 augroup python
 	autocmd BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
 augroup end
-
 
 " ==============
 "   SimpylFold
