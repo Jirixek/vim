@@ -45,10 +45,10 @@ inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " Make <CR> auto-format the code
 inoremap <silent><expr> <cr> "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
-" " Use `[g` and `]g` to navigate diagnostics
-" " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-" nmap <silent> [g <Plug>(coc-diagnostic-prev)
-" nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [d <Plug>(coc-diagnostic-prev)
+nmap <silent> ]d <Plug>(coc-diagnostic-next)
 
 " " GoTo code navigation.
 " nmap <silent> gd <Plug>(coc-definition)

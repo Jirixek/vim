@@ -24,7 +24,6 @@ Plug 'cocopon/iceberg.vim'
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
-" Plug 'vim-scripts/indentpython.vim'
 " Plug 'tmhedberg/SimpylFold'
 
 " Other
@@ -39,8 +38,8 @@ call plug#end()
 let PLUGINDIR = fnamemodify(expand("$MYVIMRC"), ":p:h") . '/config/plugin/'
 
 execute 'source' PLUGINDIR . 'coc.vimrc'
-" execute 'source' PLUGINDIR . 'fastfold.vimrc'
 execute 'source' PLUGINDIR . 'neomake.vimrc'
 execute 'source' PLUGINDIR . 'vim-tmux-navigator.vimrc'
+" execute 'source' PLUGINDIR . 'fastfold.vimrc'
 
 runtime macros/matchit.vim
