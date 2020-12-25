@@ -13,14 +13,6 @@ setlocal expandtab
 " Enable folding
 " setlocal foldmethod=indent
 
-" ===========
-"   AUTOCMD
-" ===========
-highlight BadWhitespace ctermbg=red guibg=darkred
-augroup python
-	autocmd BufRead,BufNewFile *.py,*.pyw match BadWhitespace /\s\+$/
-augroup end
-
 " ==============
 "   SimpylFold
 " ==============
