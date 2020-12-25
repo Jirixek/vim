@@ -1,7 +1,11 @@
 {
 	"coc.preferences.formatOnType": true,
 	"coc.preferences.extensionUpdateCheck": "daily",
+	"coc.preferences.rootPatterns": [],
 	"python.venvPath": "/home/jirik/.local/share/conda/envs",
 	"python.analysis.useLibraryCodeForTypes": false,
-	"coc.preferences.rootPatterns": []
+	"python.linting.flake8Enabled": true,
+	"markdownlint.config": {
+		"MD013": { "line_length": 120 }
+	}
 }
