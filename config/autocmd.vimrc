@@ -10,7 +10,7 @@ endfunction
 function DeleteTrailingSpace()
 	let l:save_view = winsaveview()
 	%substitute/\s\+$//e
-	silent! $global /^$/ normal "_dip
+	silent! v/\_s*\S/d
 	call winrestview(l:save_view)
 endfunction
 
