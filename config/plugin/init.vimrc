@@ -13,7 +13,7 @@ call plug#begin(stdpath('data') . '/plugged')
 " Big boys
 Plug 'neomake/neomake'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Plug 'Konfekt/FastFold'
+Plug 'Konfekt/FastFold'
 
 " System integration
 Plug 'rbgrouleff/bclose.vim'
@@ -24,7 +24,7 @@ Plug 'cocopon/iceberg.vim'
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'
-" Plug 'tmhedberg/SimpylFold'
+Plug 'tmhedberg/SimpylFold'
 
 " Other
 Plug 'kana/vim-textobj-entire'
@@ -40,6 +40,6 @@ let PLUGINDIR = fnamemodify(expand("$MYVIMRC"), ":p:h") . '/config/plugin/'
 execute 'source' PLUGINDIR . 'coc.vimrc'
 execute 'source' PLUGINDIR . 'neomake.vimrc'
 execute 'source' PLUGINDIR . 'vim-tmux-navigator.vimrc'
-" execute 'source' PLUGINDIR . 'fastfold.vimrc'
+execute 'source' PLUGINDIR . 'fastfold.vimrc'
 
 runtime macros/matchit.vim
