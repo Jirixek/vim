@@ -26,6 +26,9 @@ Plug 'cocopon/iceberg.vim'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tmhedberg/SimpylFold'
 
+" OpenWRT
+Plug 'cmcaine/vim-uci'
+
 " Other
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-user'
