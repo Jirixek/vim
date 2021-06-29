@@ -62,19 +62,6 @@ nnoremap <a--> <c-w>-
 nnoremap <a-=> <c-w>+
 nnoremap <a-.> <c-w>>
 
-" Create two new lines and switch to insert mode
-nnoremap <Leader>j o<CR>
-nnoremap <Leader>k O<ESC>O
-nnoremap <Leader>o o<ESC>O
-nnoremap <Leader>O O<ESC>o
-
-" Disable/enable autocommenting
-map <Leader>c :setlocal formatoptions-=cro<CR>
-map <Leader>C :setlocal formatoptions+=cro<CR>
-
-" Enable spell checking
-map <Leader>s :setlocal spell!<CR>
-
 " Mute highlights with <c-l>
 nnoremap <silent> <c-l> :noh<CR><c-l>
 
@@ -87,6 +74,3 @@ cnoremap <c-n> <Down>
 
 " Use %% as %:h in Ex Command mode
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-
-" Map this for use in templates
-nnoremap <Leader><Space> /<++><Enter>"_c4l
